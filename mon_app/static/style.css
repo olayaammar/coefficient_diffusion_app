@@ -1,0 +1,92 @@
+/* Style général de la page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Conteneur principal */
+.container {
+    width: 50%;
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Titres */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Style des formulaires */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #555;
+    text-align: left;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Bouton de soumission */
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Résultats et messages */
+h2 {
+    margin-top: 20px;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    color: #222;
+}
+
+/* Style des messages d'erreur */
+.error {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Ajout de responsivité */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
