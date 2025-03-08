@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 # Code correct pour accéder
 SECRET_CODE = "1234"
@@ -77,5 +77,5 @@ def calcul():
 
     return render_template("calcul.html", result=None, erreur=None)
     
-if _name_ == "_main_":
+if __name__ == "_main_":
     app.run(debug=True)
