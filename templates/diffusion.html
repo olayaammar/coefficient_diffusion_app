@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Calcul du coefficient de diffusion</title>
+</head>
+<body>
+    <h2>Calcul du coefficient de diffusion</h2>
+    <form method="post">
+        <label>Fraction molaire de A :</label><input type="text" name="x_A"><br>
+        <label>Coefficient de diffusion de base D_AB^0 :</label><input type="text" name="D_AB_0"><br>
+        <label>Coefficient de diffusion de base D_BA^0 :</label><input type="text" name="D_BA_0"><br>
+        <label>Paramètre de volume q_A :</label><input type="text" name="q_A"><br>
+        <label>Paramètre de volume q_B :</label><input type="text" name="q_B"><br>
+        <label>Paramètre r_A :</label><input type="text" name="r_A"><br>
+        <label>Paramètre r_B :</label><input type="text" name="r_B"><br>
+        <label>Paramètre d'interaction a_AB :</label><input type="text" name="a_AB"><br>
+        <label>Paramètre d'interaction a_BA :</label><input type="text" name="a_BA"><br>
+        <label>Température T :</label><input type="text" name="T"><br>
+        <label>Valeur expérimentale du coefficient de diffusion :</label><input type="text" name="D_exp"><br>
+        <button type="submit">Calculer</button>
+    </form>
+
+    {% if D_AB is not none %}
+        <p>Le coefficient de diffusion est : {{ D_AB }}</p>
+        <p>L'erreur est de : {{ erreur }}%</p>
+    {% endif %}
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
