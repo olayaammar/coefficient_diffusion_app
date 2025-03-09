@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Bonjour, c'est l'application de Olaya AMMAR</h1>
-    <a href="{{ url_for('login') }}">Accéder à l'application</a>
+
+    <div class="container">
+        <h1>Bienvenue sur l'application de calcul du coefficient de diffusion de AMMAR Olaya</h1>
+        <div class="buttons">
+            <form action="{{ url_for('login') }}" method="get">
+                <button type="submit">Accéder à l'application</button>
+            </form>
+            <form action="{{ url_for('instructions') }}" method="get">
+                <button type="submit">Instructions</button>
+            </form>
+            <form action="{{ url_for('historique') }}" method="get">
+                <button type="submit">Historique</button>
+            </form>
+        </div>
+    </div>
+
 </body>
 </html>

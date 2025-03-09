@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historique des Calculs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Historique des Calculs</h1>
+        <p>Cette section affichera l'historique des calculs effectués.</p>
+        <p>⚠ (Pour le moment, les calculs ne sont pas enregistrés. Il faut une base de données si tu veux sauvegarder l'historique.)</p>
+        <a href="{{ url_for('home') }}">Retour à l'accueil</a>
+    </div>
+
+</body>
+</html>
